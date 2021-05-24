@@ -1,7 +1,7 @@
 # Restaurant-Advisor
 API (Laravel) et application mobile IOS (Swift)
 
-Création d'une application mobile permettant de gérer les restaurants. Cette application permet d'afficher les restaurants, de voir leurs ratings, de supprimer, ajouter ou modifier restaurants et menus etc. Avec un Web Service (API) qui assure donc la sauvegarde, la récupération et la mise à jour des informations sur les restaurants et menus.   
+Création d'une application mobile permettant de gérer les restaurants. Cette application permet d'afficher les restaurants, de voir leurs ratings, de supprimer, ajouter ou modifier restaurants et menus. Avec un Web Service (API) qui assure la sauvegarde, la récupération et la mise à jour des informations sur les restaurants et menus.   
 
 ---
 
