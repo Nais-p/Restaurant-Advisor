@@ -8,17 +8,17 @@ Pour créer un projet: `composer create-project laravel/laravel restaurant-advis
 
 ### Création d'une DB dans mysql
 
-`Show Databases;` -> Cette commande consiste à voir les Databases existantes.
+`Show Databases;` -> Cette commande permet de voir les Databases existantes.
 
 `Create Database restaurant;` -> Création de la Database "restaurant" pour le projet.
 
 `Use restaurant;` -> Pour selectionner la DB restaurant.
 
-`Show tables;` -> Voir les tables dans la DB sélectionner au dessus.
+`Show tables;` -> Voir les tables dans la DB sélectionnée au dessus.
 
 ### Configuration du .env
 
-Changement des lignes suivantes dans le **.env** correspondant a la DB restaurant creer juste au dessus :
+Changement des lignes suivantes dans le **.env** correspondant a la DB restaurant créee juste au dessus :
 
      DB_DATABASE=restaurant
      DB_USERNAME=root
@@ -29,13 +29,13 @@ Changement des lignes suivantes dans le **.env** correspondant a la DB restauran
 ---
 
 
-*  php artisan make:model Menu --migration -> Commande pour creer model et migration appeler Menu. (Faire la même pour Restaurant et User)
+*  php artisan make:model Menu --migration -> Commande pour créer le model et la migration appelés Menu. (Faire la même pour Restaurant et User)
 *  /app/model -> Emplacement des models.
 *  /database/migration -> Emplacement des migrations.
 *  php artisan migrate -> Envoyer les migrations.
 *  php artisan migrate:refresh -> Relancer les migrations pour obtenir les mises à jours.
 
-Bien mettre dans l'ordre les migrations (sinon la migration echoue si il y a des clé, elle ne peux pas faire appelle a un Id si la migration de cette Id est en dessous).
+Bien mettre dans l'ordre les migrations (sinon la migration échoue si il y a des clés).
 `protected $table = 'Restaurant';` -> Ne pas oublier de mettre dans les Models cette ligne sinon les routes ne fonctionnent pas.
 
 ## Prérequis pour les routes
@@ -70,9 +70,9 @@ Et nous implémentons les routes demandées dans le sujet avec la bonne synthaxe
 
 Pour définir les routes nous procédons commme suit :
 
-``Route::`le type`('`l'URL`', ['`nom du controller`'::class, '`nom de la fonction passé dans le controller`']);``
+``Route::`le type`('`l'URL`', ['`nom du controller`'::class, '`nom de la fonction passée dans le controller`']);``
 
-Chacunes des routes se rapportent à une fonction dans le controller auquel elle fait appelle :
+Chacunes des routes se rapportent à une fonction dans le controller auquel elle fait appel :
   ```
 function `nom de la fonction`() {
         return response()->json(`nom du model`::all(), `200`);
@@ -84,7 +84,7 @@ function `nom de la fonction`() {
 - Et json() permettant de retourner les informations de la base de données sous forme d'un tableau json.
 
 Pour finir, nous pouvons tester nos routes à l'aide du logiciel "Postman".  
-En effet en faisant un `php artisan serve` nous récupérons l'url de notre projet que nous renseignons dans la partie "my workspace" de postman et nous pouvons ainsi tester les routes que nous venons de créer en renseignant le type, l'url de notre site dans notre cas `http://127.0.0.1:8000` ainsi que `/api/`et l'url de notre route a tester tel que `users/`.
+En effet en faisant un `php artisan serve` nous récupérons l'url de notre projet que nous renseignons dans la partie "my workspace" de postman et nous pouvons ainsi tester les routes que nous venons de créer en renseignant le type, l'url de notre site dans notre cas `http://127.0.0.1:8000` ainsi que `/api/`et l'url de notre route à tester comme `users/`.
 
 
 ## Fonctionnement des requêtes
